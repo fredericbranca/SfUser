@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+    <h1>Bienvenue {{ app.user.pseudo }}</h1>
+    {% if not app.user.isVerified %}
+        <p>Vérifiez votre mail !</p>
+
+    {% endif %}
+    <p> Votre adresse mail : {{  app.user.email }} </p>
+
+{% endblock %}
